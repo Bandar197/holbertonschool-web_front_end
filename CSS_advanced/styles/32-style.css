@@ -10,6 +10,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -441,6 +445,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
 }
 
+.section {
+    padding: var(--section-padding);
+}
+
 .section-header {
     text-align: var(--section-header-align);
     padding: var(--section-header-padding);
@@ -471,18 +479,29 @@ a:active {
     background-color: var(--color-light-grey);
 }
 
-* {
-    box-sizing: border-box;
+.button {
+    display: var(--button-display);
+    padding: var(--button-padding);
+    border: var(--button-border);
+    font-size: var(--button-font-size);
+    color: var(--button-color);
+    text-decoration: var(--button-text-decoration);
 }
+
+.button:hover {
+    color: var(--button-hover-color);
+    text-decoration: var(--button-hover-text-decoration);
+    background: var(--button-hover-background);
+    transition-duration: var(--transition-duration);
+    transition-property: color, background-color;
+}
+
 
 .container {
     width: 960px;
     margin: 0 auto;
 }
 
-.section {
-    padding: var(--section-padding);
-}
 
 .section-body {
     padding: var(--section-body-padding);
@@ -596,22 +615,6 @@ ul.row {
     text-decoration: none;
 }
 
-.button {
-    display: var(--button-display);
-    padding: var(--button-padding);
-    border: var(--button-border);
-    font-size: var(--button-font-size);
-    color: var(--button-color);
-    text-decoration: var(--button-text-decoration);
-}
-
-.button:hover {
-    color: var(--button-hover-color);
-    text-decoration: var(--button-hover-text-decoration);
-    background: var(--button-hover-background);
-    transition-duration: var(--transition-duration);
-    transition-property: color, background-color;
-}
 
 .card-testimonial {
     text-align: center;
