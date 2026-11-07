@@ -10,7 +10,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
@@ -489,7 +489,8 @@ a:active {
 
 .container {
     width: 960px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -585,7 +586,7 @@ ul.row {
     display: block;
 }
 
-.social-link svg {
+.social-link > svg {
     fill: var(--text-color);
 }
 
